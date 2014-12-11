@@ -35,6 +35,12 @@ $content-font-size: 14px;
 	#Base Styles
 
 \*----------------------------------------------------------------------------*/
+@each $extend, $value in $extends {
+	%#{$extend},
+	.#{$extend}{
+		@include font-size($value);
+	}
+}
 
 /*----------------------------------------------------------------------------*\
 
@@ -138,6 +144,12 @@ $content-font-size: 14px;
 }
 
 
+/*----------------------------------------------------------------------------*\
+
+	#Rows
+
+\*----------------------------------------------------------------------------*/
+
 .row {
 	margin-left: auto;
 	margin-right: auto;
@@ -158,16 +170,69 @@ $content-font-size: 14px;
 		margin-left: 1%;
 		margin-right: 1%;
 	}
-	.v-small {
-		@include rem-size(5px, margin-top);
+	@each $space, $spacial-value in $spaces {
+	.v-#{$space}{
+		@include rem-size($spacial-value, margin-top);
 	}
-	.v-medium {
-		@include rem-size(10px, margin-top);
-	}
-	.v-large {
-		@include rem-size(14px, margin-top);
-	}
-	
+}
+
 }
 
 
+/*----------------------------------------------------------------------------*\
+
+	#Groups
+
+\*----------------------------------------------------------------------------*/
+
+.group,
+.cf,
+.clearfix,
+.clear {
+	@extend %cf;
+}
+
+
+
+.group {
+	@extend %pos_relative;
+	@extend %cf;
+}
+
+
+/*----------------------------------------------------------------------------*\
+
+	#Content-Containers
+
+\*----------------------------------------------------------------------------*/
+
+.content-container,
+.content-container p {
+	@extend %base-font;
+}
+
+
+/*----------------------------------------------------------------------------*\
+
+	#Headlines
+
+\*----------------------------------------------------------------------------*/
+
+@each $headline, $bgcolor in $headlines {
+	.#{$headline}{
+        @include font-size($bgcolor);
+    }
+}
+
+
+/*----------------------------------------------------------------------------*\
+
+	#Helpers
+
+\*----------------------------------------------------------------------------*/
+
+.hidden,
+%hidden {
+	display: none !important;
+	visibility: hidden;
+}
