@@ -19,6 +19,12 @@
   #{$context}: calculateRem($size);
 }
 
+
+@function rem($size){
+	$remValue: $size / $base-font-size;
+	@return #{$remValue}rem;
+}
+
 @mixin box-sizing($type: border-box) {
 	&,&:before,&:after {
 		-moz-box-sizing: $type;
@@ -57,4 +63,30 @@
 	@media (min-width: $tablet-bp){
 		@content;
 	}
+}
+
+/*----------------------------------------------------------------------------*\
+
+	#images
+
+\*----------------------------------------------------------------------------*/
+
+@mixin img($display: block){
+	display: #{$display};
+	max-width: 100%;
+	height: auto;
+}
+
+
+/**
+ * Containers
+ * .container {
+ *	@include container(400px);
+ * }
+ *
+ */
+@mixin container($max-width){
+	@include rem-size($max-width, max-width);
+	@extend %pos_relative;
+	@extend %cf;
 }

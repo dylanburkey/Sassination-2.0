@@ -18,80 +18,10 @@
 	#Headline-Sizes
 
 \*----------------------------------------------------------------------------*/
-.profile-link--bandcamp:focus,
-.profile-link--bandcamp:hover {
-  background: #4e9bac; }
+/*----------------------------------------------------------------------------*\
 
-.profile-link--delicious:focus,
-.profile-link--delicious:hover {
-  background: #248cff; }
+	#Space
 
-.profile-link--facebook:focus,
-.profile-link--facebook:hover {
-  background: #3b5998; }
-
-.profile-link--ficly:focus,
-.profile-link--ficly:hover {
-  background: #b51c2c; }
-
-.profile-link--flickr:focus,
-.profile-link--flickr:hover {
-  background: #0063db; }
-
-.profile-link--github:focus,
-.profile-link--github:hover {
-  background: #4183c4; }
-
-.profile-link--googleplus:focus,
-.profile-link--googleplus:hover {
-  background: #dd4b39; }
-
-.profile-link--instagram:focus,
-.profile-link--instagram:hover {
-  background: #517fa4; }
-
-.profile-link--kickstarter:focus,
-.profile-link--kickstarter:hover {
-  background: #76cc1e; }
-
-.profile-link--lanyrd:focus,
-.profile-link--lanyrd:hover {
-  background: #152e51; }
-
-.profile-link--lastfm:focus,
-.profile-link--lastfm:hover {
-  background: #d51007; }
-
-.profile-link--linkedin:focus,
-.profile-link--linkedin:hover {
-  background: #007bb6; }
-
-.profile-link--photodrop:focus,
-.profile-link--photodrop:hover {
-  background: #cdb6e3; }
-
-.profile-link--pinterest:focus,
-.profile-link--pinterest:hover {
-  background: #cb2027; }
-
-.profile-link--rdio:focus,
-.profile-link--rdio:hover {
-  background: #0088da; }
-
-.profile-link--soundcloud:focus,
-.profile-link--soundcloud:hover {
-  background: #f60; }
-
-.profile-link--twitter:focus,
-.profile-link--twitter:hover {
-  background: #00aced; }
-
-.profile-link--vimeo:focus,
-.profile-link--vimeo:hover {
-  background: #aad450; }
-
-.profile-link--youtube:focus,
-.profile-link--youtube:hover {
-  background: #b00; }
+\*----------------------------------------------------------------------------*/
 
 /*# sourceMappingURL=_config.css.map */

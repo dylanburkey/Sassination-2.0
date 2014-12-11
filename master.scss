@@ -170,11 +170,18 @@ $content-font-size: 14px;
 		margin-left: 1%;
 		margin-right: 1%;
 	}
-	@each $space, $spacial-value in $spaces {
-	.v-#{$space}{
-		@include rem-size($spacial-value, margin-top);
+
+	@each $spacing, $value in $spacings {
+		.m-#{$spacing}-vertical {
+			@include rem-size($value, margin-top);
+		}
+		.m-#{$spacing}-horizontal {
+			margin: 0 #{$value/2};
+			margin: 0 rem($value/2);
+
+		}
+
 	}
-}
 
 }
 
@@ -200,6 +207,8 @@ $content-font-size: 14px;
 }
 
 
+
+
 /*----------------------------------------------------------------------------*\
 
 	#Content-Containers
@@ -218,10 +227,66 @@ $content-font-size: 14px;
 
 \*----------------------------------------------------------------------------*/
 
-@each $headline, $bgcolor in $headlines {
+@each $headline, $value in $headlines {
 	.#{$headline}{
-        @include font-size($bgcolor);
+        @include font-size($value);
     }
+}
+
+.header {
+	font-weight: $header-font-weight;
+	text-transform: capitalize;
+}
+
+/*----------------------------------------------------------------------------*\
+
+	#Ui
+
+\*----------------------------------------------------------------------------*/
+
+
+@each $color, $value in $colors {
+	.ui-#{$color}{
+		color: $value;
+	}
+	.ui-bg__#{$color}{
+		background: $value;
+	}
+}
+
+
+/*----------------------------------------------------------------------------*\
+
+	#responsive-containers
+
+\*----------------------------------------------------------------------------*/
+
+.img-container {
+	img {
+		@include img(block);
+	}
+}
+
+.media-container {
+	@extend %pos_relative;
+	display: block;
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+
+	.media-item,
+	iframe,
+	object,
+	video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
+		border: 0;
+	}
+
 }
 
 
@@ -236,3 +301,5 @@ $content-font-size: 14px;
 	display: none !important;
 	visibility: hidden;
 }
+
+
