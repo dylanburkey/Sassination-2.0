@@ -439,6 +439,23 @@ table {
 	#List Styles
 
 \*----------------------------------------------------------------------------*/
+.horizontal-nav {
+  list-style-type: none; }
+
+.horizontal-nav, .vertical-nav, .content-container ul {
+  list-style-position: inside;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0; }
+
+.horizontal-nav li {
+  display: inline;
+  margin-right: 2em; }
+
+.vertical-nav li {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
 .rem-size {
   height: 14px;
   height: 0.875rem; }
@@ -500,6 +517,11 @@ table {
     margin: 0 12.5px;
     margin: 0 0.78125rem; }
 
+/*----------------------------------------------------------------------------*\
+
+	#
+
+\*----------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*\
 
 	#Groups

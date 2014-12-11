@@ -138,6 +138,30 @@ $content-font-size: 14px;
 	list-style-type: none;
 }
 
+%lists {
+	list-style-position: inside;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+
+.horizontal-nav {
+	@extend %lists;
+	@extend %no-bullets;
+	li {
+		display: inline;
+		margin-right: $default-space;
+	}
+}
+
+.vertical-nav {
+	@extend %lists;
+	li {
+		margin-top: $default-space-small;
+		margin-bottom: $default-space-small;
+	}
+}
 
 .rem-size {
 	@include rem-size(14px, height);
@@ -182,9 +206,12 @@ $content-font-size: 14px;
 		}
 
 	}
-
 }
+/*----------------------------------------------------------------------------*\
 
+	#
+
+\*----------------------------------------------------------------------------*/
 
 /*----------------------------------------------------------------------------*\
 
@@ -220,7 +247,11 @@ $content-font-size: 14px;
 	@extend %base-font;
 }
 
-
+.content-container {
+	ul {
+		@extend %lists;
+	}
+}
 /*----------------------------------------------------------------------------*\
 
 	#Headlines
