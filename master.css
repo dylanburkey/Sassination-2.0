@@ -336,17 +336,12 @@ table {
 	#Base Styles
 
 \*----------------------------------------------------------------------------*/
+.base-font,
 .content-container,
-.content-container p,
-.base-font {
+.content-container p {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
-
-.base-line-height {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1; }
 
 /*----------------------------------------------------------------------------*\
 

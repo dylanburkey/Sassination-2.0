@@ -22,8 +22,6 @@ $base-font-stack: Helvetica, Arial, sans-serif;
 $global-max-width: 80%;
 
 $default-color: #333;
-
-
 $header-font-weight: 600;
 
 /*----------------------------------------------------------------------------*\
@@ -134,4 +132,19 @@ $extends: (
 	base-line-height: 24px
 );
 
+/*----------------------------------------------------------------------------*\
+
+	#default-spacings
+
+\*----------------------------------------------------------------------------*/
+
+$default-space: 2em;
+$default-space-small: 1em;
+$content-font-size: 14px;
+
+/**
+ * Light Gray Variables
+ */
+
+ $light-gray: #F8F8F8;
 

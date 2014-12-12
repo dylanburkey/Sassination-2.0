@@ -13,15 +13,7 @@
 @import "styles/sass/functions/mixins";
 @import "styles/sass/libs/normalize";
 
-$default-space: 2em;
-$default-space-small: 1em;
-$content-font-size: 14px;
 
-/**
- * Light Gray Variables
- */
-
- $light-gray: #F8F8F8;
 
 
 %content-space {
@@ -35,11 +27,9 @@ $content-font-size: 14px;
 	#Base Styles
 
 \*----------------------------------------------------------------------------*/
-@each $extend, $value in $extends {
-	%#{$extend},
-	.#{$extend}{
-		@include font-size($value);
-	}
+.base-font,
+%base-font {
+	@include font-size($base-font-size);
 }
 
 /*----------------------------------------------------------------------------*\
