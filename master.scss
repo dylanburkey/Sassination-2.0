@@ -12,6 +12,7 @@
 @import "styles/sass/extends/extends";
 @import "styles/sass/functions/mixins";
 @import "styles/sass/libs/normalize";
+@import "styles/projects/project-styles";
 
 
 
@@ -327,6 +328,23 @@
 		border: 0;
 	}
 
+}
+
+/*----------------------------------------------------------------------------*\
+
+	#Form-Elements
+
+\*----------------------------------------------------------------------------*/
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="zip"],
+input[type="address"] {
+	@include font-size($base-font-size);
+	padding: (.3125/2)#{em};
+	color: $base-font-color;
 }
 
 

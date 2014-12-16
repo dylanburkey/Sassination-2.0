@@ -127,7 +127,7 @@
 	#Extends
 
 \*----------------------------------------------------------------------------*/
-.master-container:after, .row:after, .group:after,
+.example:after, .master-container:after, .row:after, .group:after,
 .cf:after,
 .clearfix:after,
 .clear:after {
@@ -336,6 +336,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/*----------------------------------------------------------------------------*\
+
+	#Project-Styles
+
+\*----------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*\
 
 	#Master-Container
@@ -627,6 +632,22 @@ table {
     height: 100%;
     width: 100%;
     border: 0; }
+
+/*----------------------------------------------------------------------------*\
+
+	#Form-Elements
+
+\*----------------------------------------------------------------------------*/
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="zip"],
+input[type="address"] {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0.15625em;
+  color: #222; }
 
 /*----------------------------------------------------------------------------*\
 
