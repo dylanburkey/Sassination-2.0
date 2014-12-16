@@ -116,10 +116,18 @@
 \*----------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*\
 
+	#default-spacings
+
+\*----------------------------------------------------------------------------*/
+/**
+ * Light Gray Variables
+ */
+/*----------------------------------------------------------------------------*\
+
 	#Extends
 
 \*----------------------------------------------------------------------------*/
-.row:after, .group:after,
+.master-container:after, .row:after, .group:after,
 .cf:after,
 .clearfix:after,
 .clear:after {
@@ -127,7 +135,7 @@
   clear: both;
   display: block; }
 
-.row, .group, .media-container {
+.master-container, .row, .group, .media-container {
   position: relative; }
 
 /*----------------------------------------------------------------------------*\
@@ -328,9 +336,23 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/**
- * Light Gray Variables
- */
+/*----------------------------------------------------------------------------*\
+
+	#Master-Container
+
+\*----------------------------------------------------------------------------*/
+.master-container {
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+  font-size: 100%;
+  line-height: 1.4;
+  font-family: Helvetica, Arial, sans-serif; }
+  .master-container, .master-container:before, .master-container:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
 /*----------------------------------------------------------------------------*\
 
 	#Base Styles
@@ -434,10 +456,10 @@ table {
 	#List Styles
 
 \*----------------------------------------------------------------------------*/
-.horizontal-nav {
+.horizontal-nav, .vertical-nav {
   list-style-type: none; }
 
-.horizontal-nav, .vertical-nav, .content-container ul {
+.horizontal-nav, .vertical-nav, .bullet-nav, .content-container ul {
   list-style-position: inside;
   margin-top: 0;
   margin-bottom: 0;
@@ -450,10 +472,6 @@ table {
 .vertical-nav li {
   margin-top: 1em;
   margin-bottom: 1em; }
-
-.rem-size {
-  height: 14px;
-  height: 0.875rem; }
 
 /*----------------------------------------------------------------------------*\
 
@@ -618,5 +636,13 @@ table {
 .hidden {
   display: none !important;
   visibility: hidden; }
+
+.pull_left,
+.float_left {
+  float: left; }
+
+.push_right,
+.float_right {
+  float: right; }
 
 /*# sourceMappingURL=master.css.map */

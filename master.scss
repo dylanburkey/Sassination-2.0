@@ -22,6 +22,25 @@
 	margin-right: auto;
 }
 
+
+/*----------------------------------------------------------------------------*\
+
+	#Master-Container
+
+\*----------------------------------------------------------------------------*/
+
+.master-container {
+	@include box-sizing(border-box);
+	@extend %pos_relative;
+	@extend %cf;
+	margin: 0 auto;
+	height: 100%;
+	overflow: hidden;
+	font-size: 100%;
+	line-height: 1.4;
+	font-family: $base-font-stack;
+}
+
 /*----------------------------------------------------------------------------*\
 
 	#Base Styles
@@ -147,16 +166,16 @@
 
 .vertical-nav {
 	@extend %lists;
+	@extend %no-bullets;
 	li {
 		margin-top: $default-space-small;
 		margin-bottom: $default-space-small;
 	}
 }
 
-.rem-size {
-	@include rem-size(14px, height);
+.bullet-nav {
+	@extend %lists;
 }
-
 
 /*----------------------------------------------------------------------------*\
 
@@ -321,6 +340,16 @@
 %hidden {
 	display: none !important;
 	visibility: hidden;
+}
+
+.pull_left,
+.float_left {
+	float: left;
+}
+
+.push_right,
+.float_right {
+	float: right;
 }
 
 
